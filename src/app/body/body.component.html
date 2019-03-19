@@ -1,0 +1,26 @@
+<mat-sidenav-container>
+  <mat-sidenav mode="side" role="navigation" fixInViewport="true" opened>
+    <mat-nav-list>
+      <h2 matSubheader>Acciones</h2>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Inicio</a>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Estatus</a>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Presupuestos y giros</a>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Cuentas bancarias</a>
+      <a mat-list-item routerLink="/cartasPatrocinio" routerLinkActive="active-link">Cartas de patrocinio</a>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Certificado deuda</a>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Interacciones</a>
+      <mat-divider></mat-divider>
+      <h2 matSubheader> Mi información </h2>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Actualización de datos</a>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Proyecto apoyado</a>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Académica</a>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Permanencia</a>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Laboral</a>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Codeudores</a>
+      <a mat-list-item routerLink="/tbd" routerLinkActive="active-link">Documentos</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content role="main">
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

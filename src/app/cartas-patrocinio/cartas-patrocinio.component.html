@@ -1,0 +1,87 @@
+<h1>Cartas Patrocinio</h1>
+<p>Acá podrá generar sus cartas y certificados necesarios para cumplir con los trámites asociados
+  a su proyecto. Para generar el documento seleccione el idioma, elija el tipo del documento y
+  finalice pulsando el link generar documento.</p>
+
+<div fxLayout fxLayoutAlign="center center" fxLayoutGap="30px">
+  <h3>A quién va dirigida?</h3>
+  <mat-radio-group>
+    <mat-radio-button (change)="changeAddressee($event)" value="1" [checked]="true">A quien pueda interesar
+    </mat-radio-button><br>
+    <mat-radio-button (change)="changeAddressee($event)" value="2">A esta persona</mat-radio-button>
+  </mat-radio-group>
+</div>
+<div *ngIf="addressee">
+  <br>
+  <label>Titulo</label><br>
+  <mat-radio-group>
+    <mat-radio-button value="1">Señor</mat-radio-button>
+    <mat-radio-button value="2">Señora</mat-radio-button>
+    <mat-radio-button value="3">Señores</mat-radio-button>
+  </mat-radio-group><br><br>
+  <label>Nombres</label><br>
+  <mat-form-field>
+    <input matInput>
+  </mat-form-field><br>
+  <label>Apellidos</label><br>
+  <mat-form-field>
+    <input matInput>
+  </mat-form-field><br>
+  <label>Cargo</label><br>
+  <mat-form-field>
+    <input matInput>
+  </mat-form-field><br>
+  <h3>A donde va dirigida?</h3>
+  <label>Organización</label><br>
+  <mat-form-field>
+    <input matInput>
+  </mat-form-field><br> 
+  <label>Dirección</label><br>
+  <mat-form-field>
+    <input matInput>
+  </mat-form-field><br> 
+  <label>Detalles</label><br>
+  <mat-form-field>
+    <input matInput>
+  </mat-form-field><br> 
+  <label>Ciudad</label><br>
+  <mat-form-field>
+    <input matInput>
+  </mat-form-field><br> 
+  <label>País</label><br>
+  <mat-form-field>
+    <input matInput>
+  </mat-form-field><br>
+</div>
+
+<br>
+<div fxLayout fxLayoutAlign="center center" fxLayoutGap="30px">
+  <h3>En qué idioma?</h3>
+  <mat-radio-group>
+    <mat-radio-button (change)="changeLanguage('SP')" value="SP" [checked]="true">Español</mat-radio-button><br>
+    <mat-radio-button (change)="changeLanguage('EN')" value="EN">Inglés</mat-radio-button><br>
+    <mat-radio-button (change)="changeLanguage('FR')" value="FR">Francés</mat-radio-button><br>
+    <mat-radio-button (change)="changeLanguage('IT')" value="IT">Italiano</mat-radio-button><br>
+    <mat-radio-button (change)="changeLanguage('GE')" value="GE">Alemán</mat-radio-button><br>
+  </mat-radio-group>
+  <br>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nombre </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="previewLink">
+      <th mat-header-cell *matHeaderCellDef> Ver </th>
+      <td mat-cell *matCellDef="let element">Ver</td>
+    </ng-container>
+
+    <ng-container matColumnDef="generateLink">
+      <th mat-header-cell *matHeaderCellDef> Generar </th>
+      <td mat-cell *matCellDef="let element">Generar RTF</td>
+    </ng-container>
+
+    <!--tr mat-header-row *matHeaderRowDef="displayedColumns"></tr-->
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

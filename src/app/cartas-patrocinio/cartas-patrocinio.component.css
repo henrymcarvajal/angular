@@ -1,0 +1,38 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h3 {
+    color: red;
+}
+
+label {
+    color: darkgray;
+}
+
+.mat-cell {
+    padding: 0%;
+    width: 50ex;
+}
+
+.mat-input-underline {
+    background-color: #FF0000;    /* replace this color with your accent color hex code */
+}
+
+.mat-radio-button {
+    margin-right: 30px;
+}
+
+.mat-row:nth-child(even) {
+    background-color: white;
+}
+
+.mat-row:nth-child(odd) {
+    background-color: lightgray;
+}
+
+td {
+    color: blue;
+    text-decoration: underline;
+    cursor: pointer;
+}
